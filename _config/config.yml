@@ -1,0 +1,14 @@
+---
+Name: cmsstickymenupreference
+After: "framework/*", "cms/*"
+---
+UserMenuPreference:
+    DefaultMode: "default"
+
+LeftAndMain:
+    extensions:
+        - "CMSMenuPreference"
+
+Member:
+    extensions:
+        - "UserMenuPreference"
