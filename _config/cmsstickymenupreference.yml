@@ -1,14 +1,19 @@
 ---
 Name: cmsstickymenupreference
-After: "framework/*", "cms/*"
 ---
-UserMenuPreference:
-    DefaultMode: "default"
+SilverStripe\Core\Injector\Injector:
+  UserMenuPreference:
+    class: Innoweb\CMSStickyMenu\Model\UserMenuPreference
+  CMSMenuPreference:
+    class: Innoweb\CMSStickyMenu\Model\CMSMenuPreference
 
-LeftAndMain:
-    extensions:
-        - "CMSMenuPreference"
+Innoweb\CMSStickyMenu\Model\UserMenuPreference:
+    DefaultMode: 'default'
 
-Member:
-    extensions:
-        - "UserMenuPreference"
+SilverStripe\Admin\LeftAndMain:
+  extensions:
+    - Innoweb\CMSStickyMenu\Model\CMSMenuPreference
+
+SilverStripe\Security\Member:
+  extensions:
+    - Innoweb\CMSStickyMenu\Model\UserMenuPreference
