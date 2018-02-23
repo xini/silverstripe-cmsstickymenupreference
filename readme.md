@@ -11,7 +11,9 @@ Based on the ideas from Webbuilders Group's [CMS Preview Preference module](http
 
 ## Requirements
 
-* SilverStripe CMS ~3.2
+* SilverStripe CMS 4.x
+
+Note: this version is compatible with SilverStripe 4. For SilverStripe 3, please see the [1.0 release line](https://github.com/xini/silverstripe-cmsstickymenupreference/tree/1.0).
 
 ## Installation
 
@@ -28,8 +30,8 @@ Then run dev/build.
 The default menu mode is set to "default", you can change this in your config by setting the UserMenuPreference.DefaultMode setting to one of the following: "open", "closed" or "default".
 
 ```yml
-UserMenuPreference:
-    DefaultMode: "open"
+Innoweb\CMSStickyMenu\Model\UserMenuPreference:
+  DefaultMode: 'open'
 ```
 
 ## Usage
