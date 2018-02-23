@@ -1,7 +1,7 @@
 en:
-    UserMenuPreference:
-        MENU_MODE: "Default Menu Mode"
-        OPEN_MODE: "Open Mode: Menu is open and the sticky box is ticked"
-        CLOSED_MODE: "Closed Mode: Menu is closed and the sticky box is ticked"
-        DEFAULT_MODE: "Default Mode: Showing the menu is left to the CMS default behaviour"
-        CHANGE_REFRESH: "You have updated your menu preference, you must refresh your browser to see the updated setting"
+  Innoweb\CMSStickyMenu\Model\UserMenuPreference:
+    MENU_MODE: "Default Menu Mode"
+    OPEN_MODE: "Open Mode: Menu is open and the sticky box is ticked"
+    CLOSED_MODE: "Closed Mode: Menu is closed and the sticky box is ticked"
+    DEFAULT_MODE: "Default Mode: Showing the menu is left to the CMS default behaviour"
+    CHANGE_REFRESH: "You have updated your menu preference, you must refresh your browser to see the updated setting"
