@@ -40,7 +40,7 @@ class UserMenuPreference extends DataExtension {
                         'Innoweb\\CMSStickyMenu\\Model\\UserMenuPreference.CLOSED_MODE',
                         '_Closed Mode: Menu is closed and the sticky box is ticked'
                     ),
-                    'preview'   =>  _t(
+                    'default'   =>  _t(
                         'Innoweb\\CMSStickyMenu\\Model\\UserMenuPreference.DEFAULT_MODE',
                         '_Default Mode: Showing the menu is left to the CMS default behaviour'
                     )
