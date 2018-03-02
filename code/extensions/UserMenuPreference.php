@@ -26,7 +26,7 @@ class UserMenuPreference extends DataExtension {
 				array(
 					'open'=>_t('UserMenuPreference.OPEN_MODE', '_Open Mode: Menu is open and the sticky box is ticked'),
 					'closed'=>_t('UserMenuPreference.CLOSED_MODE', '_Closed Mode: Menu is closed and the sticky box is ticked'),
-					'preview'=>_t('UserMenuPreference.DEFAULT_MODE', '_Default Mode: Showing the menu is left to the CMS default behaviour')
+					'default'=>_t('UserMenuPreference.DEFAULT_MODE', '_Default Mode: Showing the menu is left to the CMS default behaviour')
 				),
 				Config::inst()->get('UserMenuPreference', 'DefaultMode')
 			)
