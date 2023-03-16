@@ -10,7 +10,7 @@
 	}],
 	"require":
 	{
-		"silverstripe/cms": "^4"
+		"silverstripe/cms": "^5"
 	},
 	"autoload": {
 		"psr-4": {
