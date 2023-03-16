@@ -1,12 +1,6 @@
 ---
 Name: cmsstickymenupreference
 ---
-SilverStripe\Core\Injector\Injector:
-  UserMenuPreference:
-    class: Innoweb\CMSStickyMenu\Model\UserMenuPreference
-  CMSMenuPreference:
-    class: Innoweb\CMSStickyMenu\Model\CMSMenuPreference
-
 Innoweb\CMSStickyMenu\Model\UserMenuPreference:
     DefaultMode: 'default'
 
