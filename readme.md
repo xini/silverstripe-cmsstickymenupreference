@@ -11,11 +11,7 @@ Based on the ideas from Webbuilders Group's [CMS Preview Preference module](http
 
 ## Requirements
 
-* SilverStripe CMS 5.x
-
-Note: this version is compatible with SilverStripe 5. 
-For SilverStripe 4, please see the [2 release line](https://github.com/xini/silverstripe-cmsstickymenupreference/tree/2). 
-For SilverStripe 3, please see the [1.0 release line](https://github.com/xini/silverstripe-cmsstickymenupreference/tree/1.0).
+* SilverStripe Admin 3.x (Silverstripe 6)
 
 ## Installation
 

@@ -2,13 +2,14 @@
 
 namespace Innoweb\CMSStickyMenu\Model;
 
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Control\Controller;
 use SilverStripe\Core\Config\Config;
+use SilverStripe\Core\Extension;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\OptionsetField;
-use SilverStripe\Control\Controller;
 
-class UserMenuPreference extends DataExtension {
+class UserMenuPreference extends Extension
+{
 
     private static $db = [
         'DefaultMenuMode'   =>  "Enum(array('open', 'closed', 'default'), 'default')"
@@ -24,7 +25,8 @@ class UserMenuPreference extends DataExtension {
      * Updates the fields used in the cms
      * @param {FieldList} $fields Fields to be extended
      */
-    public function updateCMSFields(FieldList $fields) {
+    public function updateCMSFields(FieldList $fields)
+    {
 
         $fields->addFieldToTab(
             'Root.Main',
@@ -52,7 +54,7 @@ class UserMenuPreference extends DataExtension {
         $controller = Controller::curr();
         $session = $controller->getRequest()->getSession();
 
-        if($session->get('ShowMenuSettingChangeReload') == true) {
+        if ($session->get('ShowMenuSettingChangeReload') == true) {
             $field->setMessage(
                 _t(
                     'Innoweb\\CMSStickyMenu\\Model\\UserMenuPreference.CHANGE_REFRESH',
@@ -72,14 +74,12 @@ class UserMenuPreference extends DataExtension {
      */
     public function onBeforeWrite()
     {
-        parent::onBeforeWrite();
-
-        if (empty($this->owner->DefaultMenuMode)) {
-            $this->owner->DefaultMenuMode = Config::inst()->get(UserMenuPreference::class, 'DefaultMode');
+        if (empty($this->getOwner()->DefaultMenuMode)) {
+            $this->getOwner()->DefaultMenuMode = Config::inst()->get(UserMenuPreference::class, 'DefaultMode');
         }
 
         // If changed ensure their is a session message
-        if ($this->owner->isChanged('DefaultMenuMode')) {
+        if ($this->getOwner()->isChanged('DefaultMenuMode')) {
             $controller = Controller::curr();
             $session = $controller->getRequest()->getSession();
             $session->set('ShowMenuSettingChangeReload', true);
